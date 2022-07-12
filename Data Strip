@@ -1,0 +1,10 @@
+return {
+    payload: {
+        mildred_device: msg.payload.pets[1].position.device_id,
+        mildred_where: msg.payload.pets[1].position.where,
+        mildred_who: msg.payload.pets[1].status.activity.user_id,
+        dave_device: msg.payload.pets[0].position.device_id,
+        dave_where: msg.payload.pets[0].position.where,
+        dave_who: msg.payload.pets[0].status.activity.user_id,
+    }
+};
