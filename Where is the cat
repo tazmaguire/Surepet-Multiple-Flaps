@@ -1,0 +1,22 @@
+var payload = msg.payload.mildred_device; //Mildred 
+
+//If Flap ID is 890598 (Kitchen) and Mildred is inside (1) display "In The House"
+if (msg.payload.mildred_device == "890598" && msg.payload.mildred_where == "1"){
+  msg.payload = "In The House"; 
+}
+//If Flap ID is 890598 (Kitchen) and Mildred is outside (2) display "Outside"  
+else if (msg.payload.mildred_device == "890598" && msg.payload.mildred_where == "2"){
+  msg.payload = "Outside";
+}
+//If Flap ID is 123456 (Conservatory) and Mildred is inside (1) display "Inside"  
+else if (msg.payload.mildred_device == "837204" && msg.payload.mildred_where == "1"){
+  msg.payload = "In The House";
+}
+//If Flap ID is 123456 (Conservatory) and Mildred is Outside (1) display "In The Conservatory"  
+else if (msg.payload.mildred_device == "837204" && msg.payload.mildred_where == "2"){
+  msg.payload = "In The Conservatory";
+}
+else if (msg.payload.mildred_who >1) {
+  msg.payload = "IM NOT SURE WHERE SHE IS SORRY";
+}
+return msg;
